@@ -1,5 +1,5 @@
 /*
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 */
 
 import Scrollbar from './scroll-area-scrollbar.svelte';

@@ -1,10 +1,13 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
 	import { FolderIcon, FileIcon } from '@lucide/svelte';
-	import { isFolder, type ExplorerNode } from '../utils/types.svelte';
+	import {
+		isFolder,
+		type ExplorerNode
+	} from '../browser-utils/types.svelte';
 
 	let { node }: { node: ExplorerNode } = $props();
 </script>

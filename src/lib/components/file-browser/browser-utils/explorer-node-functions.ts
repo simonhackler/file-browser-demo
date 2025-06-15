@@ -1,5 +1,5 @@
 /*
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 */
 
 import { downloadZip } from 'client-zip';
@@ -13,10 +13,13 @@ import {
 } from './types.svelte';
 
 export class ExplorerNodeFunctions {
-	constructor(
-		private fileFunctions: FileFunctions,
-		private homeFolderPath: string
-	) {}
+	private fileFunctions: FileFunctions;
+	private homeFolderPath: string;
+
+	constructor(fileFunctions: FileFunctions, homeFolderPath: string) {
+		this.fileFunctions = fileFunctions;
+		this.homeFolderPath = homeFolderPath;
+	}
 
 	private getPath(node: ExplorerNode): string[] {
 		const path = [node.name];
@@ -65,6 +68,9 @@ export class ExplorerNodeFunctions {
 	}
 
 	public async deleteNodes(nodes: ExplorerNode[]) {
+		console.log(nodes);
+		console.log('home folder path: ');
+		console.log(this.homeFolderPath);
 		const allFilesToDelete: string[] = [];
 
 		for (const node of nodes) {

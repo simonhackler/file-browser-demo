@@ -1,20 +1,17 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
-	import { downloadZip } from 'client-zip';
 	import * as Popover from '../../ui/popover/index.js';
 	import { Plus } from '@lucide/svelte';
 	import { Button } from '../../ui/button';
 	import {
-		deepCopyExplorerNode,
 		type ExplorerNode,
 		type FileFunctions,
-		FileLeaf,
 		Folder,
 		isFolder
-	} from '../utils/types.svelte';
+	} from '../browser-utils/types.svelte';
 
 	import * as Breadcrumb from '../../ui/breadcrumb/index.js';
 	import BreadcrumbRecursive from '$lib/components/file-browser/browser-ui/breadcrumb-recursive.svelte';
@@ -25,7 +22,7 @@
 	import FileUpload from './file-upload.svelte';
 	import MoveCopyDialog from './move-copy-dialog.svelte';
 	import { Input } from '../../ui/input';
-	import { ExplorerNodeFunctions } from '../utils/explorer-node-functions';
+	import { ExplorerNodeFunctions } from '../browser-utils/explorer-node-functions';
 
 	let {
 		currentFolder = $bindable(),
@@ -88,8 +85,8 @@
 	}
 
 	const fileFunctionsNode = {
-		deleteNodes: explorerFunctions.deleteNodes,
-		downloadNodes: explorerFunctions.downloadNodes,
+		deleteNodes: explorerFunctions.deleteNodes.bind(explorerFunctions),
+		downloadNodes: explorerFunctions.downloadNodes.bind(explorerFunctions),
 		moveNodes: setActionMove,
 		copyNodes: setActionCopy
 	};

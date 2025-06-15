@@ -1,5 +1,5 @@
 /*
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 */
 
 import { Popover as PopoverPrimitive } from 'bits-ui';

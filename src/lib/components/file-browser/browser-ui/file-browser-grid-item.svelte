@@ -1,5 +1,5 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
@@ -7,7 +7,10 @@
 	import { Checkbox as CheckboxPrimitive } from 'bits-ui';
 
 	import { displaySize } from '../../ui/file-drop-zone';
-	import { isFolder, type ExplorerNode } from '../utils/types.svelte';
+	import {
+		isFolder,
+		type ExplorerNode
+	} from '../browser-utils/types.svelte';
 	import FileBrowserItemIcon from './file-browser-item-icon.svelte';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 	import type { WithElementRef, WithoutChildrenOrChild } from '../../../utils/utils';

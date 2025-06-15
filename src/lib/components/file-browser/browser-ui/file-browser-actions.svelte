@@ -1,11 +1,11 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
 	import * as DropdownMenu from '../../ui/dropdown-menu/index.js';
 	import { Ellipsis, Trash2, Folders, FolderOutput, Download } from '@lucide/svelte';
-	import { isFolder, type ExplorerNode, type Folder } from '../utils/types.svelte';
+	import { isFolder, type ExplorerNode, type Folder } from '../browser-utils/types.svelte';
 
 	let {
 		node,

@@ -1,5 +1,5 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts" generics="TValue">
@@ -22,7 +22,7 @@
 	import { createSvelteTable, FlexRender } from '../../ui/data-table/index.js';
 	import * as Table from '../../ui/table/index.js';
 	import { cn } from '../../../utils/utils';
-	import { isFolder, type ExplorerNode } from '../utils/types.svelte';
+	import { isFolder, type ExplorerNode } from '../browser-utils/types.svelte';
 	import FileBrowserGridItem from './file-browser-grid-item.svelte';
 	import type { Snippet } from 'svelte';
 	import { Input } from '../../ui/input/index.js';

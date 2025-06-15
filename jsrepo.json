@@ -1,13 +1,13 @@
 {
 	"$schema": "https://unpkg.com/jsrepo@2.4.0/schemas/project-config.json",
-	"repos": ["https://github.com/simonhackler/svelte-file-explorer/tree/jsrepo"],
+	"repos": ["https://github.com/simonhackler/svelte-file-explorer"],
 	"includeTests": false,
 	"includeDocs": false,
 	"watermark": true,
 	"formatter": "prettier",
 	"configFiles": {},
 	"paths": {
-		"*": "./src",
+		"*": "./src/lib",
 		"utils": "./src/lib/utils",
 		"file-browser": "./src/lib/components/file-browser",
 		"ui": "./src/lib/components/ui"

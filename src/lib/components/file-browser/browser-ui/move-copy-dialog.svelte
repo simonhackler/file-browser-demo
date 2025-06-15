@@ -1,11 +1,11 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
 	import * as Dialog from '../../ui/dialog/index.js';
 
-	import { isFolder, type ExplorerNode, type Folder } from '../utils/types.svelte';
+	import { isFolder, type ExplorerNode, type Folder } from '../browser-utils/types.svelte';
 	import FileBrowser from './file-browser.svelte';
 	import { Button } from '../../ui/button';
 

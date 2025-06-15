@@ -1,10 +1,10 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
 	import { Button } from '../../ui/button';
-	import type { FileLeaf, ExplorerNode, Folder } from '../utils/types.svelte';
+	import type { FileLeaf, ExplorerNode, Folder } from '../browser-utils/types.svelte';
 	import * as Breadcrumb from '../../ui/breadcrumb/index.js';
 	import BreadcrumbRecursive from '$lib/components/file-browser/browser-ui/breadcrumb-recursive.svelte';
 

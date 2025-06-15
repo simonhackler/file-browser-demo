@@ -1,11 +1,11 @@
 <!--
-	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+	Installed from github/simonhackler/svelte-file-explorer
 -->
 
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { ExplorerNode } from '../utils/types.svelte';
-	import { Folder, isFolder } from '../utils/types.svelte';
+	import type { ExplorerNode } from '../browser-utils/types.svelte';
+	import { Folder, isFolder } from '../browser-utils/types.svelte';
 	import FileBrowser from '$lib/components/file-browser/browser-ui/file-browser.svelte';
 	import type { Adapter } from '../adapters/adapter';
 
