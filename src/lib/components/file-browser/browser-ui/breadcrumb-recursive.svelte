@@ -1,0 +1,32 @@
+<!--
+	Installed from github/simonhackler/svelte-file-explorer/tree/jsrepo
+-->
+
+<script lang="ts">
+	import { Button } from '../../ui/button';
+	import type { FileLeaf, ExplorerNode, Folder } from '../utils/types.svelte';
+	import * as Breadcrumb from '../../ui/breadcrumb/index.js';
+	import BreadcrumbRecursive from '$lib/components/file-browser/browser-ui/breadcrumb-recursive.svelte';
+
+	interface Props {
+		folder: Folder;
+		isLast?: boolean;
+		onBreadCrumbClick: (folder: Folder) => void;
+	}
+
+	let { folder, isLast = true, onBreadCrumbClick }: Props = $props();
+</script>
+
+{#if folder.parent}
+	<BreadcrumbRecursive {onBreadCrumbClick} folder={folder.parent} isLast={false} />
+{/if}
+{#if !isLast}
+	<Breadcrumb.Item>
+		<Button variant="ghost" onclick={() => onBreadCrumbClick(folder)}>{folder.name}</Button>
+	</Breadcrumb.Item>
+	<Breadcrumb.Separator />
+{:else}
+	<Breadcrumb.Item>
+		<Button variant="ghost" onclick={() => onBreadCrumbClick(folder)}>{folder.name}</Button>
+	</Breadcrumb.Item>
+{/if}
